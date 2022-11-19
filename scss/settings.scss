@@ -1,0 +1,48 @@
+// *************************************
+// settings
+// *************************************
+$right-color: #EAE6E0;
+$middle-color: #B6ADA5;
+$dark-color: #6E6259;
+
+@mixin h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: medium;
+  font-size: 100px;
+}
+
+@mixin h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  $font-h2: 40px;
+  font-size: 40px;
+}
+
+@mixin p {
+  font-size: 14px;
+  line-height: 34px;
+}
+
+@mixin h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+@mixin subtitle {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+}
+
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+// *************************************

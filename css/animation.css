@@ -1,0 +1,411 @@
+/* ---------------------------------
+　各ページ フェードイン
+----------------------------------*/
+section {
+  opacity: 0;
+}
+
+section.on {
+  opacity: 1;
+}
+
+/* ---------------------------------
+　文字 フェードイン（右から左）
+----------------------------------*/
+.textAnime {
+  opacity: 0;
+}
+
+.textAnime.on {
+  animation: fadeInR 1.5s ease .5s 1 normal backwards;
+  opacity: 1;
+}
+
+@keyframes fadeInR {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------------------------------
+　文字 フェードイン（左から右）
+----------------------------------*/
+.textAnimeL {
+  opacity: 0;
+}
+
+.textAnimeL.on {
+  animation: fadeInL 1.5s ease .5s 1 normal backwards;
+  opacity: 1;
+}
+
+@keyframes fadeInL {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------------------------------
+　画像 フェードイン（下から上）
+----------------------------------*/
+.imageAnime {
+  opacity: 0;
+}
+
+.imageAnime.on {
+  animation: fadeIn-top 1.5s ease .5s 1 normal backwards;
+  opacity: 1;
+}
+
+@keyframes fadeIn-top {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------------------------------
+　マウスストーカー
+----------------------------------*/
+body {
+  position: relative;
+  /*もともとあるカーソルは非表示に*/
+  cursor: none;
+}
+
+/*カーソル要素*/
+#cursor {
+  position: fixed;
+
+  /*丸の大きさと色の指定*/
+  background: rgba(110, 98, 89, .6);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  /*真ん中にくるようにマイナスマージンで調整*/
+
+  z-index: 2;
+  /*一番手前に来るように*/
+  pointer-events: none;
+  /*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+  transition: transform 0.1s;
+  /*アニメーションの秒数指定*/
+}
+
+/*ちょっと遅れてついてくるストーカー要素*/
+#stalker {
+  position: fixed;
+
+  /*丸の大きさと色の指定*/
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #B6ADA5;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: -30px 0 0 -30px;
+  /*真ん中にくるようにマイナスマージンで調整*/
+  z-index: 1;
+  /*カーソルの後ろに来るように*/
+  pointer-events: none;
+  /*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+  transition: transform 0.5s;
+  /*アニメーションの秒数指定*/
+}
+
+#cursor.active,
+#stalker.active {
+  transform: scale(1.4);
+}
+
+
+/* ---------------------------------
+　SNS アイコン / アニメーション
+----------------------------------*/
+.heartbeat {
+  -webkit-animation: heartbeat 2.5s ease-in-out infinite both;
+  animation: heartbeat 2.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* ---------------------------------
+　ナビゲーション
+----------------------------------*/
+/*アクティブになったエリア*/
+#g-nav.panelactive {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg {
+  position: fixed;
+  z-index: 3;
+  /*丸の形*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #B6ADA5;
+  /*丸のスタート位置と形状*/
+  transform: scale(0);
+  /*scaleをはじめは0に*/
+  /* left: -50px;
+  bottom: -50px; */
+  right: -50px;
+  top: -50px;
+  transition: all .6s;
+  /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive {
+  transform: scale(50);
+  /*クラスが付与されたらscaleを拡大*/
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list {
+  display: none;
+  /*はじめは表示なし*/
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list {
+  display: block;
+  /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  opacity: 0;
+  /*はじめは透過0*/
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+  opacity: 1;
+}
+
+/* 背景が出現後にナビゲーション li を表示*/
+#g-nav.panelactive ul li {
+  animation-name: gnaviAnime;
+  animation-duration: 1s;
+  animation-delay: .2s;
+  /*0.2 秒遅らせて出現*/
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes gnaviAnime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*リストのレイアウト設定*/
+#g-nav ul {
+  width: 60%;
+}
+
+#g-nav li {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  list-style: none;
+  padding: 10px;
+}
+
+#g-nav li:nth-child(2),
+#g-nav li:nth-child(8),
+#g-nav li:nth-child(11) {
+  margin-bottom: 30px;
+}
+
+#g-nav li.title {
+  font-size: 30px;
+  color: #EAE6E0;
+  display: block;
+  border-bottom: 1px solid #EAE6E0;
+  margin-bottom: 20px;
+}
+
+#g-nav li a {
+  color: #6E6259;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  letter-spacing: 0.1em;
+  text-indent: 1em;
+}
+
+
+/* --　ボタンのためのCSS　--- */
+.openbtn {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 9999;
+  /*ボタンを最前面に*/
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+}
+
+/*×に変化*/
+.openbtn span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #6E6259;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}

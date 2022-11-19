@@ -1,0 +1,740 @@
+@import 'settings.scss';
+
+@media screen and (max-width: 480px) {
+  .only-mobile {
+    display: block;
+  }
+
+  .only-mobile02 {
+    display: none;
+  }
+
+  #order .six .position .inner {
+    .left {
+      display: none;
+    }
+
+    .left_mb {
+      display: block;
+    }
+  }
+
+  // -------------------------------------
+  // ヘッダー
+  // -------------------------------------
+  header {
+    padding: 30px;
+
+    .logo {
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  /* ---------------------------------
+　ナビゲーション
+----------------------------------*/
+  .openbtn {
+    top: 20px;
+    right: 20px;
+  }
+
+  /* ---------------------------------
+　マウスストーカー
+----------------------------------*/
+  body {
+    position: initial;
+    cursor: auto;
+  }
+
+  #cursor,
+  #stalker {
+    display: none;
+  }
+
+  /* -----------------------
+  横スクロール解除
+----------------------- */
+  .outer-wrapper {
+    width: auto;
+    height: auto;
+    transform: none;
+    transform-origin: 50% 50% 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: initial;
+    scroll-behavior: auto;
+  }
+
+  .wrapper {
+    display: block;
+    width: auto;
+    transform: none;
+    transform-origin: 50% 50% 0;
+
+    .slide {
+      width: auto;
+      height: auto;
+      position: initial;
+    }
+  }
+
+  // -------------------------------------
+  // 影画像
+  // -------------------------------------
+  .shadow {
+    img.left {
+      height: 35%;
+    }
+
+    img.right {
+      height: 35%;
+    }
+  }
+
+  /* -----------------------
+  トップページ
+----------------------- */
+  #toppage .one .position {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 100px;
+    margin-bottom: 70px;
+
+    .left {
+      width: 100%;
+      height: auto;
+      position: initial;
+
+      .inner {
+        width: 80%;
+        height: 85%;
+        position: initial;
+        margin-left: auto;
+      }
+    }
+
+    .right {
+      width: 100%;
+      height: auto;
+      margin-bottom: 50px;
+
+      .inner {
+        padding: 30px;
+        height: auto;
+
+        .top {
+          font-size: 15px;
+          line-height: 25px;
+          margin-bottom: 100px;
+        }
+
+        h1 {
+          font-size: 60px;
+        }
+
+        h2 {
+          font-size: 40px;
+          margin-bottom: 100px;
+          margin-right: 5%;
+          margin-top: -8%;
+
+        }
+
+        .middle02 {
+          margin-top: 0;
+          margin-bottom: 50px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  // OUR STORY/コンテンツページ
+  // -------------------------------------
+  #story .two .position {
+    height: auto;
+    padding: 30px;
+    margin-bottom: 70px;
+
+    .title {
+      height: auto;
+      position: initial;
+      margin-bottom: 20px;
+
+      .text {
+        margin-left: 0;
+
+        h2 {
+          font-size: 30px;
+        }
+
+        h1 {
+          font-size: 50px;
+          margin-bottom: 50px;
+        }
+      }
+
+      img {
+        width: 85%;
+        height: 120px;
+        position: initial;
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    .inner {
+      height: auto;
+      display: initial;
+
+      .left {
+        width: 100%;
+
+        p {
+          margin-bottom: 50px;
+          font-size: 15px;
+          text-align: right;
+        }
+
+        img {
+          text-align: left;
+          margin-bottom: 20px;
+        }
+      }
+
+      .right {
+        width: 100%;
+
+        img {
+          width: 90px;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 50px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  // MISSION/コンテンツページ
+  // -------------------------------------
+  #mission .three .position {
+    width: 100%;
+    height: auto;
+    position: initial;
+    margin-bottom: 70px;
+
+    // 文字スクロールアニメーション---------------
+    .flowimg {
+      padding-top: 45px;
+    }
+
+
+    .title {
+      width: 100%;
+      position: initial;
+      margin-bottom: 20px;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h3 {
+        font-size: 17px;
+      }
+    }
+
+    .inner {
+      height: auto;
+      padding: 30px;
+      @include center;
+
+      .text01 {
+        height: auto;
+        text-align: left;
+
+        h3 {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+
+      .image {
+        height: auto;
+        display: block;
+        margin-bottom: 30px;
+
+        img {
+          width: 300px;
+          height: 200px;
+        }
+
+        img:first-child {
+          margin-right: -60px;
+          margin-bottom: 30px;
+        }
+
+        img:last-child {
+          margin-left: -60px;
+        }
+
+      }
+
+      .text02 {
+        height: auto;
+        text-align: left;
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  // YOUR OWN/コンテンツページ
+  // -------------------------------------
+
+  #your-own .four .position {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 30px;
+    margin-bottom: 70px;
+
+    .content {
+      width: auto;
+
+      .title {
+        margin-bottom: 30px;
+        padding-left: 0;
+
+        h2 {
+          margin-bottom: 0;
+          font-size: 30px
+        }
+
+        h1 {
+          font-size: 50px;
+        }
+      }
+
+      .subtitle {
+        text-align: left;
+        margin-bottom: 30px;
+        padding-right: 0;
+
+        h3 {
+          font-size: 15px;
+          margin-bottom: 50px;
+        }
+
+        p {
+          font-size: 14px;
+          text-align: right;
+          margin-bottom: 20px;
+        }
+      }
+
+      .inner {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .left {
+          width: 100%;
+        }
+
+        .right {
+          width: 100%;
+          height: auto;
+          margin-bottom: 50px;
+          // text-align: right;
+
+          img {
+            width: 300px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  // STRENGTH
+  // -------------------------------------
+  #strength .position {
+    width: 100%;
+    height: auto;
+    position: initial;
+    padding: 30px;
+    margin-bottom: 70px;
+
+    .title {
+      position: initial;
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 0;
+      }
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .one {
+      position: initial;
+      margin-bottom: 50px;
+
+      img {
+        width: 300px;
+        transform: rotate(180deg);
+        margin-bottom: 20px;
+      }
+
+      .text {
+        width: 100%;
+        text-align: left;
+        margin-right: 0;
+      }
+    }
+
+    .two {
+      position: initial;
+      margin-bottom: 50px;
+
+      img {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        width: 100%;
+        display: block;
+        margin-right: 0;
+        margin-top: 0;
+      }
+    }
+
+    .three {
+      position: initial;
+      display: flex;
+      flex-direction: column-reverse;
+
+      img {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        width: 300px;
+        @include p;
+        text-align: left;
+        margin-top: 0;
+        margin-right: 0;
+      }
+    }
+
+    h3 {
+      color: $middle-color;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h3:before {
+      content: "";
+      background: #fff;
+      width: 20px;
+      height: 2px;
+      margin: 0 10px 0 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+
+
+  // -------------------------------------
+  // ORDER/コンテンツページ
+  // -------------------------------------
+
+  #order .position {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    margin-bottom: 70px;
+
+    .title {
+      display: block;
+      height: auto;
+      margin-right: 0;
+
+      h2 {
+        font-size: 30px;
+        margin-right: 0;
+      }
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .inner {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0;
+      text-align: center;
+
+      .left_mb {
+        width: 100%;
+        display: block;
+        padding: 0;
+
+        img {
+          width: 320px;
+          margin-bottom: 20px;
+          object-fit: cover;
+        }
+      }
+
+      .right {
+        width: 100%;
+        margin-bottom: 50px;
+
+        img:last-child {
+          display: block;
+          margin-left: auto;
+        }
+
+        img:first-child {
+          margin-bottom: 30px;
+          display: block;
+          margin-right: auto;
+        }
+      }
+    }
+
+    // 背景テクスチャ
+    background-image: none;
+  }
+
+
+  // -------------------------------------
+  // MENU 01/コンテンツページ
+  // -------------------------------------
+  #menu-01 .position {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    margin-bottom: 70px;
+
+    .title {
+      text-align: center;
+      padding-top: 0;
+      padding-left: 0;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h3 {
+        @include h3;
+        font-size: 17px;
+        margin-bottom: 50px;
+      }
+    }
+
+    // 背景画像　砂
+    background-image: none;
+
+    .content {
+      width: 100%;
+      display: block;
+      padding-bottom: 0;
+      margin-top: 0;
+
+      .left {
+        @include center;
+        width: 100%;
+        flex-direction: column-reverse;
+
+        p {
+          margin-left: 0;
+        }
+
+        img {
+          width: 350px;
+          margin-left: 200px;
+        }
+      }
+
+      .right {
+        width: 100%;
+
+        img {
+          width: 350px;
+          margin-right: 200px;
+        }
+
+        p {
+          margin-right: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  // MENU 02/コンテンツページ
+  // -------------------------------------
+  #menu-02 .position {
+    width: 100%;
+    height: auto;
+    position: initial;
+    margin-bottom: 100px;
+    // 背景画像
+    background-image: none;
+
+    .title {
+      height: auto;
+      width: auto;
+      padding-top: 0;
+      margin-bottom: 50px;
+
+      h3 {
+        font-size: 17px
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+    }
+
+    .top {
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  // ACCESS/コンテンツページ
+  // -------------------------------------
+
+  #access .position {
+    width: 100%;
+    height: auto;
+    position: initial;
+    padding: 30px;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+
+    .top {
+      height: auto;
+      position: initial;
+
+      h1 {
+        font-size: 50px;
+        margin-left: 0;
+        margin-bottom: 50px;
+      }
+    }
+
+    .middle {
+      height: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 100px;
+
+      .text {
+        width: 100%;
+        @include center;
+        align-items: flex-start;
+        padding-left: 0;
+
+        p:first-child {
+          margin-bottom: 20px;
+        }
+      }
+
+      iframe {
+        position: initial;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .bottom {
+      height: auto;
+      padding-top: 0;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  // SNS/コンテンツページ
+  // -------------------------------------
+  #sns .position {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-top: 50px;
+    @include center;
+
+    .top {
+      height: auto;
+
+      h1 {
+        font-size: 80px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 100px;
+      }
+    }
+
+    .middle p {
+      height: auto;
+      width: 100%;
+      display: block;
+      font-size: 120px;
+      margin-bottom: 100px;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .bottom {
+      height: auto;
+    }
+  }
+}
