@@ -33,7 +33,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: 11000;
-  // display: none;
+  display: none;
 
   p {
     position: fixed;
@@ -594,13 +594,13 @@ header {
   height: 100vh;
   display: flex;
   justify-content: space-between;
-  padding: 150px 350px;
+  padding: 150px 300px;
 
   .content {
     width: 100vw;
 
     .title {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       padding-left: 50px;
 
       h2 {
@@ -624,8 +624,8 @@ header {
 
     .subtitle {
       text-align: right;
-      margin-bottom: 3%;
-      padding-right: 100px;
+      margin-bottom: 50px;
+      padding-right: 0;
 
       h3 {
         @include h3;
@@ -640,12 +640,14 @@ header {
     }
 
     .inner {
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
 
       .left {
         width: 45%;
+        padding-left: 50px;
 
         p {
           @include p;
